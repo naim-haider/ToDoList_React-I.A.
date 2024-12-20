@@ -55,33 +55,34 @@ function App() {
   }
 
   return (
-    <div className="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-x-auto mt-16">
-      <Header />
-
-      <form className="w-full max-w-sm mx-auto px-4 py-2">
-        <div className="flex items-center border-b-2 border-teal-500 py-2">
-          <input
-            className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
-            type="text"
-            placeholder="Add a task"
-            value={task}
-            onChange={(e) => setTask(e.target.value)}
-          />
-          <button
-            className="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-2 px-4 rounded"
-            type="button"
-            onClick={addTask}
-          >
-            Add
-          </button>
-        </div>
-      </form>
-      <ToDoList
-        tasks={tasks}
-        deleteTask={deleteTask}
-        editTask={editTask}
-        toggleCompletion={toggleCompletion}
-      />
+    <div className="h-screen w-screen bg-gradient-to-tr from-green-200 via-green-200 to-green-400">
+      <div className="max-w-md mx-auto relative top-16 bg-white shadow-lg rounded-lg overflow-x-auto">
+        <Header />
+        <form className="w-full max-w-sm mx-auto px-4 py-2">
+          <div className="flex items-center border-b-2 border-teal-500 py-2">
+            <input
+              className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+              type="text"
+              placeholder="Add a task"
+              value={task}
+              onChange={(e) => setTask(e.target.value)}
+            />
+            <button
+              className="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-2 px-4 rounded"
+              type="button"
+              onClick={addTask}
+            >
+              Add
+            </button>
+          </div>
+        </form>
+        <ToDoList
+          tasks={tasks}
+          deleteTask={deleteTask}
+          editTask={editTask}
+          toggleCompletion={toggleCompletion}
+        />
+      </div>
     </div>
   );
 }
