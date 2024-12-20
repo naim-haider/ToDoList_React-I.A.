@@ -6,7 +6,6 @@ import ToDoList from "./Components/ToDoList";
 function App() {
   const [tasks, setTasks] = useState([]);
   const [task, setTask] = useState("");
-  // console.log(task);
 
   // --Load tasks from local storage when the app loads--
   useEffect(() => {
@@ -31,7 +30,6 @@ function App() {
 
     setTask("");
   }
-  // console.log(tasks);
 
   // --delete task by filtering the tasks with id--
   function deleteTask(id) {
